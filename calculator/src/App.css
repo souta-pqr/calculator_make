@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-  padding: 20px;
-}
-
 .calculator {
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f0f8ff; /* Alice Blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"] {
   width: 100%;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 10px;
   font-size: 18px;
+  border: 1px solid #b0c4de; /* Light Steel Blue */
+  border-radius: 5px;
 }
 
 .result {
-  background-color: #f0f0f0;
-  padding: 5px;
+  background-color: #e6f2ff; /* Very Light Blue */
+  padding: 10px;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 24px;
+  text-align: right;
+  border-radius: 5px;
+  border: 1px solid #b0c4de; /* Light Steel Blue */
 }
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 5px;
 }
 
 button {
-  padding: 10px;
+  padding: 15px 5px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #4682b4; /* Steel Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #5c94c5;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* 数字ボタン */
+button:nth-child(-n+10) {
+  background-color: #6495ed; /* Cornflower Blue */
+}
+
+/* 演算子ボタン */
+button:nth-child(4n) {
+  background-color: #4169e1; /* Royal Blue */
+}
+
+/* 関数ボタン */
+button:nth-child(n+11):nth-child(-n+24) {
+  background-color: #1e90ff; /* Dodger Blue */
+}
+
+/* メモリ操作ボタン */
+button:nth-child(n+35):nth-child(-n+38) {
+  background-color: #00bfff; /* Deep Sky Blue */
+}
+
+/* クリアボタンと角度切替ボタン */
+button:nth-last-child(-n+2) {
+  background-color: #87cefa; /* Light Sky Blue */
+}
+
+.history {
+  margin-top: 20px;
+  border-top: 1px solid #b0c4de; /* Light Steel Blue */
+  padding-top: 10px;
+}
+
+.history h3 {
+  margin-bottom: 10px;
+  color: #4682b4; /* Steel Blue */
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  margin-bottom: 5px;
+  color: #4682b4; /* Steel Blue */
 }
